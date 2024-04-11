@@ -1,0 +1,216 @@
+[gd_scene load_steps=4 format=3 uid="uid://twxge1f0jv8y"]
+
+[ext_resource type="Script" path="res://addons/ply.godot_ed_tools/materials_exporter/materials_exporter_dialog.gd" id="1_1yy37"]
+
+[sub_resource type="Image" id="Image_kxuw1"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 229, 229, 229, 38, 224, 224, 224, 114, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 114, 228, 228, 228, 37, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 225, 225, 225, 58, 224, 224, 224, 248, 224, 224, 224, 220, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 220, 224, 224, 224, 247, 228, 228, 228, 55, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 169, 224, 224, 224, 181, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 1, 225, 225, 225, 183, 225, 225, 225, 166, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 72, 224, 224, 224, 254, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 252, 224, 224, 224, 145, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 226, 226, 226, 35, 224, 224, 224, 64, 224, 224, 224, 64, 224, 224, 224, 64, 224, 224, 224, 64, 224, 224, 224, 64, 226, 226, 226, 60, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 229, 229, 229, 19, 224, 224, 224, 114, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 128, 224, 224, 224, 115, 232, 232, 232, 22, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 160, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 160, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 224, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 159, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 234, 234, 234, 12, 224, 224, 224, 254, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 116, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 227, 227, 227, 54, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 74, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 96, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 231, 231, 231, 31, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 139, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 243, 255, 255, 255, 1, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 225, 225, 225, 182, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 202, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 192, 224, 224, 224, 128, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 224, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 159, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 224, 224, 224, 178, 225, 225, 225, 157, 255, 255, 255, 0, 225, 225, 225, 34, 224, 224, 224, 254, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 106, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 225, 225, 225, 93, 224, 224, 224, 249, 224, 224, 224, 162, 224, 224, 224, 216, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 235, 230, 230, 230, 20, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 225, 225, 225, 91, 224, 224, 224, 177, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 192, 224, 224, 224, 163, 226, 226, 226, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 20,
+"mipmaps": false,
+"width": 20
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_4ht2i"]
+image = SubResource("Image_kxuw1")
+
+[node name="MaterialsExporterDialog" type="ConfirmationDialog"]
+title = "Extract Materials"
+initial_position = 2
+size = Vector2i(650, 749)
+visible = true
+script = ExtResource("1_1yy37")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 645.0
+offset_bottom = 697.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Materials"
+
+[node name="MaterialsPathEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "... path to materials folder ..."
+
+[node name="MaterialsPathButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+icon = SubResource("ImageTexture_4ht2i")
+icon_alignment = 1
+
+[node name="Spacer1" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "(Optional) If set, an attempt will be made to set up the extracted materials with textures using the name of the material and specified tags. All tags must be valid regex pattens if used. Empty tags are ignored."
+autowrap_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="TexturesPathEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "... path to textures folder ..."
+
+[node name="TexturesPathButton" type="Button" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+icon = SubResource("ImageTexture_4ht2i")
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Albedo map tag"
+
+[node name="AlbedoMapEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "_bc$"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Nomal map tag"
+
+[node name="NormalMapEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "_n$"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Metallic map tag"
+
+[node name="MetallicMapEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "_m$"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer6"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Roughness map tag"
+
+[node name="RoughnessMapEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer6"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "_ro$"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer7"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Ambient occlusion map tag"
+
+[node name="AOcclusionMapEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer7"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "_ao$"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer8"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Material name cleanup"
+
+[node name="MatNameCleanupEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer8"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Regex used to clean up the material name to improve texture name lookups.
+Example, to remove a post/prefix from the name. Use lowercase."
+text = "^m_"
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer9"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Texture name cleanup"
+
+[node name="TexNameCleanupEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer9"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Regex used to clean up the texture name to improve texture name lookups.
+Example, to remove a post/prefix from the name. Use lowercase."
+text = "^(t_)|(_bc|_n|_m|_ro|_ao)$"
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="OverrideMatsCheck" type="CheckBox" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Override existing materials."
+autowrap_mode = 2
+
+[node name="ForceUpdateScenesCheck" type="CheckBox" parent="VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "Force update scenes with materials even if already extracted."
+autowrap_mode = 2

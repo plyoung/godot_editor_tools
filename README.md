@@ -19,7 +19,7 @@ You must specify a folder for the material and optionally a path to where textur
 
 It is imporant to get rid of the post/pre tags in the names to help identify which textures belong with which materials when using the auto texture option.
 
-In this example the material names all start with `m_` so I set name cleanup to get rid of that. The textures all start with `t_` and end with `_bc` of albedo, `_n` for normal, `_m` for metallic, `_ro` for roughness, and `_ao` for ambient occlusion. So `^(t_)|(_bc|_n|_m|_ro|_ao)$` will help clean up the texture names while the indivisual tag patterns seen in image below help identify which are albedo, normal, etc. You can change these to what ever patterns you use in your texture and material file naming.
+In this example the material names all start with `m_` so I set name cleanup to get rid of that. The textures all start with `t_` and end with `_bc` of albedo, `_n` for normal, `_m` for metallic, `_ro` for roughness, and `_ao` for ambient occlusion. So `^(t_)|(_bc|_n|_m|_ro|_ao)$` will help clean up the texture names while the indivisual tag patterns seen in image below help identify which are albedo, normal, etc. You can change these to whatever patterns you use in your texture and material file naming.
 
 ![sample](/img/extract_mats.png)
 

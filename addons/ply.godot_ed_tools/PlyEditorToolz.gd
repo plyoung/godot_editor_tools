@@ -4,11 +4,13 @@ extends EditorPlugin
 
 const MaterialsExporterDialog = preload("res://addons/ply.godot_ed_tools/materials_exporter/materials_exporter_dialog.tscn")
 const PrefabsMakerSetupDialog = preload("res://addons/ply.godot_ed_tools/prefabs_maker/prefab_maker_setup_dialog.tscn")
+const PlyProgressDialog = preload("res://addons/ply.godot_ed_tools/progress_dialog/progress_dialog.tscn")
 const MenuName := "plyTools"
 
 var _tools_menu: PopupMenu
 var _materials_exporter_dialog: ConfirmationDialog
 var _prefabs_maker_dialog: ConfirmationDialog
+static var _progress_dialog: PlyToolsProgressDialog
 
 # ----------------------------------------------------------------------------------------------------------------------
 #region system
@@ -29,6 +31,7 @@ func _disable_plugin() -> void:
 func _remove_windows() -> void:
 	if _materials_exporter_dialog: _materials_exporter_dialog.queue_free();
 	if _prefabs_maker_dialog: _prefabs_maker_dialog.queue_free();
+	hide_progress_dialog()
 
 
 #endregion
@@ -39,7 +42,7 @@ func _add_menu_entries() -> void:
 	var menu := _add_submenu_to_tools_menu(MenuName)
 	menu.id_pressed.connect(_on_model_tools_popup_menu)
 	menu.add_item("Extract Materials from Selected", 1)
-	#menu.add_item("Make Prefabs from Selected", 2)
+	menu.add_item("Make Prefabs from Selected", 2)
 	pass
 
 
@@ -57,20 +60,37 @@ func _on_model_tools_popup_menu(id: int) -> void:
 
 #endregion
 # ----------------------------------------------------------------------------------------------------------------------
-#region ...
+#region dialogs
 
 func _open_extract_materials_dialog() -> void:
 	if not _materials_exporter_dialog: 
-		_materials_exporter_dialog = MaterialsExporterDialog.instantiate() as ConfirmationDialog
+		_materials_exporter_dialog = MaterialsExporterDialog.instantiate()
 		EditorInterface.get_base_control().add_child(_materials_exporter_dialog)
 	_materials_exporter_dialog.popup()	
 
 
 func _open_prefabs_maker_dialog() -> void:
 	if not _prefabs_maker_dialog: 
-		_prefabs_maker_dialog = PrefabsMakerSetupDialog.instantiate() as ConfirmationDialog
+		_prefabs_maker_dialog = PrefabsMakerSetupDialog.instantiate()
 		EditorInterface.get_base_control().add_child(_prefabs_maker_dialog)
 	_prefabs_maker_dialog.popup()
+
+
+static func show_progress_dialog() -> PlyToolsProgressDialog:
+	if not _progress_dialog:
+		_progress_dialog = PlyProgressDialog.instantiate() as PlyToolsProgressDialog
+		EditorInterface.get_base_control().add_child(_progress_dialog)
+	_progress_dialog.set_heading("")
+	_progress_dialog.set_message("")
+	_progress_dialog.set_progress(0)
+	_progress_dialog.popup()
+	return _progress_dialog
+
+
+static func hide_progress_dialog() -> void:
+	if _progress_dialog:
+		_progress_dialog.queue_free()
+		_progress_dialog = null
 
 
 #endregion

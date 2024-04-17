@@ -24,5 +24,10 @@ In this example the material names all start with `m_` so I set name cleanup to 
 ![sample](/img/extract_mats.png)
 
 
+## Bulk create Inherited Scenes (Prefabs)
 
+This tool will create inherited scenes in the target path from the selected scenes/models.
 
+The tool's dialog can be opened via menu: `Project > Tools > plyTools > Make Prefabs from Selected.`
+
+![sample](/img/prefabs.png)

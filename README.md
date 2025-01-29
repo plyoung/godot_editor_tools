@@ -30,7 +30,7 @@ This tool will create inherited scenes in the target path from the selected sour
 
 ## Material mapper
 
-Opened via menu: `Project > Tools > plyTools > Remap Matewrials on Selected.`
+Opened via menu: `Project > Tools > plyTools > Remap Materials on Selected.`
 
 This is used to set the material on the selected (in FileSystem dock) scenes or models. For models this will be similar to using the advanced import window to set the 'use exten' material of a model and for scenes/prefabs this will make use of the 'Surface Material Override' of the MeshInstance3D.
 

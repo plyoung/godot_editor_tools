@@ -2,14 +2,16 @@
 class_name PlyEditorToolz
 extends EditorPlugin
 
-const MaterialsExporterDialog = preload("res://addons/ply.godot_ed_tools/materials_exporter/materials_exporter_dialog.tscn")
+const BulkImportDialog = preload("res://addons/ply.godot_ed_tools/bulk_import/bulk_import_dialog.tscn")
 const PrefabsMakerSetupDialog = preload("res://addons/ply.godot_ed_tools/prefabs_maker/prefab_maker_setup_dialog.tscn")
+const RemapMatsDialog = preload("res://addons/ply.godot_ed_tools/remap_materials/remap_materials_dialog.tscn")
 const PlyProgressDialog = preload("res://addons/ply.godot_ed_tools/progress_dialog/progress_dialog.tscn")
 const MenuName := "plyTools"
 
 var _tools_menu: PopupMenu
-var _materials_exporter_dialog: ConfirmationDialog
+var _bulk_import_dialog: ConfirmationDialog
 var _prefabs_maker_dialog: ConfirmationDialog
+var _remap_materials_dialog: ConfirmationDialog
 static var _progress_dialog: PlyToolsProgressDialog
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -29,8 +31,9 @@ func _disable_plugin() -> void:
 #region setup
 
 func _remove_windows() -> void:
-	if _materials_exporter_dialog: _materials_exporter_dialog.queue_free();
-	if _prefabs_maker_dialog: _prefabs_maker_dialog.queue_free();
+	if _bulk_import_dialog: _bulk_import_dialog.queue_free()
+	if _prefabs_maker_dialog: _prefabs_maker_dialog.queue_free()
+	if _remap_materials_dialog: _remap_materials_dialog.queue_free()
 	hide_progress_dialog()
 
 
@@ -41,8 +44,9 @@ func _remove_windows() -> void:
 func _add_menu_entries() -> void:
 	var menu := _add_submenu_to_tools_menu(MenuName)
 	menu.id_pressed.connect(_on_model_tools_popup_menu)
-	menu.add_item("Extract Materials from Selected", 1)
-	menu.add_item("Make Prefabs from Selected", 2)
+	menu.add_item("Import Settings for Selected", 1)
+	menu.add_item("Remap Materials on Selected", 2)
+	menu.add_item("Prefabs Maker", 3)
 	pass
 
 
@@ -53,20 +57,29 @@ func _remove_menu_entries() -> void:
 
 func _on_model_tools_popup_menu(id: int) -> void:
 	if id == 1:
-		_open_extract_materials_dialog();
-	if id == 2: 
-		_open_prefabs_maker_dialog();
+		_open_bulk_import_dialog()
+	if id == 2:
+		_open_remap_mats_dialog()
+	if id == 3: 
+		_open_prefabs_maker_dialog()
 
 
 #endregion
 # ----------------------------------------------------------------------------------------------------------------------
 #region dialogs
 
-func _open_extract_materials_dialog() -> void:
-	if not _materials_exporter_dialog: 
-		_materials_exporter_dialog = MaterialsExporterDialog.instantiate()
-		EditorInterface.get_base_control().add_child(_materials_exporter_dialog)
-	_materials_exporter_dialog.popup()	
+func _open_bulk_import_dialog() -> void:
+	if not _bulk_import_dialog: 
+		_bulk_import_dialog = BulkImportDialog.instantiate()
+		EditorInterface.get_base_control().add_child(_bulk_import_dialog)
+	_bulk_import_dialog.popup()
+
+
+func _open_remap_mats_dialog() -> void:
+	if not _remap_materials_dialog: 
+		_remap_materials_dialog = RemapMatsDialog.instantiate()
+		EditorInterface.get_base_control().add_child(_remap_materials_dialog)
+	_remap_materials_dialog.popup()
 
 
 func _open_prefabs_maker_dialog() -> void:

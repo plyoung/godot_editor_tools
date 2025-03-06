@@ -1,9 +1,17 @@
 @tool
 extends ConfirmationDialog
 
+# import options
 @onready var SkipImportCheck : CheckBox = %SkipImportCheck
-@onready var SkipImportEd : LineEdit = %SkipImportEdit
+@onready var SkipImportValue : LineEdit = %SkipImportEdit
+@onready var ShadowMeshCheck : CheckBox = %ShadowMeshCheck
+@onready var ShadowMeshValue : CheckBox = %ShadowMeshValue
+@onready var MeshLayersCheck : CheckBox = %MeshLayerCheck
+@onready var MeshLayersValue : LineEdit = %MeshLayerEdit
+
+# material options
 @onready var ExportMatsCheck : CheckBox = %ExportMaterialsCheck
+@onready var MatOpsContainer : Control = %MaterialOptions
 @onready var MaterialsPathEd : LineEdit = %MaterialsPathEdit
 @onready var TexturesPathEd : LineEdit = %TexturesPathEdit
 @onready var MaterialsPathButton : Button = %MaterialsPathButton
@@ -48,8 +56,13 @@ var mats_path : String
 var texs_path : String
 var roughness_value : float
 
-const skip_import_check_key := "addons/ply_editor_tools/batch_import/process_skip_imports"
-const skip_import_settings_key := "addons/ply_editor_tools/batch_import/skip_import_settings"
+const skip_import_process_key := "addons/ply_editor_tools/batch_import/skip_imports_process"
+const skip_import_value_key := "addons/ply_editor_tools/batch_import/skip_imports_value"
+const shadow_mesh_process_key := "addons/ply_editor_tools/batch_import/shadow_mesh_process"
+const shadow_mesh_value_key := "addons/ply_editor_tools/batch_import/shadow_mesh_value"
+const mesh_layers_process_key := "addons/ply_editor_tools/batch_import/mesh_layers_process"
+const mesh_layers_value_key := "addons/ply_editor_tools/batch_import/mesh_layers_value"
+
 const export_materials_key := "addons/ply_editor_tools/batch_import/export_materials"
 const last_materials_path_settings_key := "addons/ply_editor_tools/batch_import/last_materials_path"
 const last_textures_path_settings_key := "addons/ply_editor_tools/batch_import/last_textures_path"
@@ -91,11 +104,16 @@ class TextureMatch:
 
 func _ready() -> void:
 	var icon := get_theme_icon("Load", "EditorIcons")
+	
 	MaterialsPathButton.icon = icon
 	TexturesPathButton.icon = icon
+	
+	ExportMatsCheck.toggled.connect(func(on): MatOpsContainer.visible = on)
 	MaterialsPathButton.pressed.connect(func(): _show_file_dialog(func(dir: String): MaterialsPathEd.text = dir, EditorFileDialog.FILE_MODE_OPEN_DIR, EditorFileDialog.ACCESS_RESOURCES))
 	TexturesPathButton.pressed.connect(func(): _show_file_dialog(func(dir: String): TexturesPathEd.text = dir, EditorFileDialog.FILE_MODE_OPEN_DIR, EditorFileDialog.ACCESS_RESOURCES))
+	
 	confirmed.connect(_on_confirmation)
+	
 	split_regex.compile("([a-zA-Z0-9]+)")
 	_read_settings()
 
@@ -105,8 +123,13 @@ func _exit_tree() -> void:
 
 
 func _read_settings() -> void:
-	SkipImportCheck.button_pressed = ProjectSettings.get_setting(skip_import_check_key, false)
-	SkipImportEd.text = ProjectSettings.get_setting(skip_import_settings_key, "(_lod1|_lod2|_lod3|_lod4|_lod5)$")
+	SkipImportCheck.button_pressed = ProjectSettings.get_setting(skip_import_process_key, false)
+	SkipImportValue.text = ProjectSettings.get_setting(skip_import_value_key, "(_lod1|_lod2|_lod3|_lod4|_lod5)$")
+	ShadowMeshCheck.button_pressed = ProjectSettings.get_setting(shadow_mesh_process_key, false)
+	ShadowMeshValue.button_pressed = ProjectSettings.get_setting(shadow_mesh_value_key, true)
+	MeshLayersCheck.button_pressed = ProjectSettings.get_setting(mesh_layers_process_key, false)
+	MeshLayersValue.text = ProjectSettings.get_setting(mesh_layers_value_key, "1")
+	
 	ExportMatsCheck.button_pressed = ProjectSettings.get_setting(export_materials_key, false)
 	MaterialsPathEd.text = ProjectSettings.get_setting(last_materials_path_settings_key, "")
 	TexturesPathEd.text = ProjectSettings.get_setting(last_textures_path_settings_key, "")
@@ -128,11 +151,19 @@ func _read_settings() -> void:
 	ResetRoughnessValueCheck.button_pressed = ProjectSettings.get_setting(reset_roughness_value_settings_key, false)
 	ResetRoughnessValueEd.text = ProjectSettings.get_setting(reset_roughness_value_to_settings_key, "0.5")
 	ResetEmissionCheck.button_pressed = ProjectSettings.get_setting(reset_emission_settings_key, false)
+	
+	MatOpsContainer.visible = ExportMatsCheck.button_pressed
+
 
 
 func _save_settings() -> void:
-	ProjectSettings.set_setting(skip_import_check_key, SkipImportCheck.button_pressed)
-	ProjectSettings.set_setting(skip_import_settings_key, SkipImportEd.text)
+	ProjectSettings.set_setting(skip_import_process_key, SkipImportCheck.button_pressed)
+	ProjectSettings.set_setting(skip_import_value_key, SkipImportValue.text)
+	ProjectSettings.set_setting(shadow_mesh_process_key, ShadowMeshCheck.button_pressed)
+	ProjectSettings.set_setting(shadow_mesh_value_key, ShadowMeshValue.button_pressed)
+	ProjectSettings.set_setting(mesh_layers_process_key, MeshLayersCheck.button_pressed)
+	ProjectSettings.set_setting(mesh_layers_value_key, MeshLayersValue.text)
+	
 	ProjectSettings.set_setting(export_materials_key, ExportMatsCheck.button_pressed)
 	ProjectSettings.set_setting(last_materials_path_settings_key, MaterialsPathEd.text)
 	ProjectSettings.set_setting(last_textures_path_settings_key, TexturesPathEd.text)
@@ -173,7 +204,7 @@ func _on_confirmation() -> void:
 	matname_cleanup_regex.clear()
 	texname_cleanup_regex.clear()
 	
-	if not SkipImportEd.text.is_empty(): skip_import_regex.compile(SkipImportEd.text)
+	if not SkipImportValue.text.is_empty(): skip_import_regex.compile(SkipImportValue.text)
 	if not AlbedoMapEd.text.is_empty(): albedo_tag_regex.compile(AlbedoMapEd.text)
 	if not NormalMapEd.text.is_empty(): normal_tag_regex.compile(NormalMapEd.text)
 	if not MetallicMapEd.text.is_empty(): metallic_tag_regex.compile(MetallicMapEd.text)
@@ -193,10 +224,10 @@ func _check_directories() -> bool:
 	mats_path = MaterialsPathEd.text
 	texs_path = TexturesPathEd.text
 	var mats_dir : DirAccess = null if mats_path.is_empty() else DirAccess.open(mats_path)
-	if mats_dir == null:
+	if ExportMatsCheck.button_pressed and mats_dir == null:
 		printerr("Invalid materials path")
 		return false
-	if not texs_path.is_empty():
+	if ExportMatsCheck.button_pressed and not texs_path.is_empty():
 		var text_dir = DirAccess.open(texs_path)
 		if text_dir == null:
 			printerr("Invalid textures path")
@@ -240,9 +271,13 @@ func _process_file(model_path: String) -> void:
 
 	var parent_node := model.instantiate(PackedScene.GEN_EDIT_STATE_MAIN)
 
-	# check skip import
+	# check import options
 	if SkipImportCheck.button_pressed and skip_import_regex.is_valid():
 		updated = _update_skip_import_options(config, parent_node) or updated
+	if ShadowMeshCheck.button_pressed:
+		updated = _update_shadow_mesh_options(config, parent_node) or updated
+	if MeshLayersCheck.button_pressed:
+		updated = _update_mesh_layers_options(config, parent_node) or updated
 	
 	# process the scene materials
 	if ExportMatsCheck.button_pressed:
@@ -299,6 +334,45 @@ func _check_node_for_skip_import(node: Node, path: String, node_names : Array[St
 		node_names.append(node_path)
 	for n in node.get_children():
 		_check_node_for_skip_import(n, node_path, node_names)
+
+
+func _update_shadow_mesh_options(config: ConfigFile, node: Node) -> bool:
+	var changed = false
+	var value := config.get_value("params", "meshes/create_shadow_meshes", true) as bool
+	if ShadowMeshValue.button_pressed != value:
+		changed = true
+		config.set_value("params", "meshes/create_shadow_meshes", ShadowMeshValue.button_pressed)
+	return changed
+
+
+func _update_mesh_layers_options(config: ConfigFile, node: Node) -> bool:
+	var layermask := MeshLayersValue.text.to_int()
+	_set_options_for_all_meshinstances(config, node, "mesh_instance/layers", layermask)
+	return true
+
+
+func _set_options_for_all_meshinstances(config: ConfigFile, node: Node, key: String, value: Variant) -> void:
+	var node_paths : Array[String] = []
+	_get_meshinstance_paths(node, "", node_paths)
+	var subres := config.get_value("params", "_subresources", Dictionary()) as Dictionary
+	if not subres.has("nodes"): subres["nodes"] = Dictionary()
+	var subres_nodes : Dictionary = subres["nodes"]
+	for path in node_paths:
+		var node_path_name := "PATH:" + path
+		if not subres_nodes.has(node_path_name): subres_nodes[node_path_name] = Dictionary()
+		var n : Dictionary = subres_nodes[node_path_name]
+		n[key] = value
+
+
+func _get_meshinstance_paths(node: Node, path: String, node_paths : Array[String]) -> void:
+	if not node: return
+	var node_path := node.name
+	if path.length() > 0 and node.get_parent().get_parent(): 
+		node_path = path + "/" + node.name
+	if node is MeshInstance3D:
+		node_paths.append(node_path)
+	for n in node.get_children():
+		_get_meshinstance_paths(n, node_path, node_paths)
 
 
 func _reset_to_use_internal_materials(config: ConfigFile, import_path: String, scene_path: String) -> bool:

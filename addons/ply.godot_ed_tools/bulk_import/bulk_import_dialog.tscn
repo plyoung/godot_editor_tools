@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dxbqvokehm65f" path="res://addons/ply.godot_ed_tools/bulk_import/bulk_import_dialog.gd" id="1_5m2a4"]
 
-[sub_resource type="Image" id="Image_3iv2f"]
+[sub_resource type="Image" id="Image_78bdx"]
 data = {
-"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 92, 92, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 92, 92, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 255, 255, 0, 255, 91, 91, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 91, 91, 42, 255, 91, 91, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 255, 92, 92, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 255, 93, 93, 255, 255, 92, 92, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 92, 92, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 90, 90, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 42, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 255, 93, 93, 41, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 42, 255, 93, 93, 233, 255, 92, 92, 232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 45, 255, 93, 93, 44, 0, 0, 0, 0, 255, 91, 91, 42, 255, 91, 91, 42, 0, 0, 0, 0, 255, 91, 91, 45, 255, 93, 93, 44, 0, 0, 0, 0, 255, 91, 91, 42, 255, 91, 91, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 0, 0, 0, 0, 0, 0, 0, 0, 255, 91, 91, 45, 255, 92, 92, 235, 255, 92, 92, 234, 255, 89, 89, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 255, 92, 92, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 91, 91, 59, 255, 92, 92, 61, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "format": "RGBA8",
 "height": 16,
 "mipmaps": false,
 "width": 16
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_blstb"]
-image = SubResource("Image_3iv2f")
+[sub_resource type="ImageTexture" id="ImageTexture_hjs2i"]
+image = SubResource("Image_78bdx")
 
 [node name="BulkImportDialog" type="ConfirmationDialog"]
 title = "Import Settings"
@@ -24,10 +24,10 @@ min_size = Vector2i(845, 800)
 script = ExtResource("1_5m2a4")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 837.0
-offset_bottom = 751.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 836.0
+offset_bottom = 739.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
@@ -56,8 +56,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 tooltip_text = "Enable to perform his step"
-button_pressed = true
-text = "Set nodes to 'skip import'"
+text = "Set nodes to 'skip import' on:"
 
 [node name="SkipImportEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer11"]
 unique_name_in_owner = true
@@ -65,6 +64,40 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Regex pattern used to detect nodes to set to ''Skip Import'"
 text = "(_lod1|_lod2|_lod3|_lod4|_lod5|_collider)"
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShadowMeshCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer12"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+tooltip_text = "Enable to perform his step"
+text = "Change 'create shadow meshes' to:"
+
+[node name="ShadowMeshValue" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer12"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+tooltip_text = "Enable to perform his step"
+button_pressed = true
+
+[node name="HBoxContainer13" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MeshLayerCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer13"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+tooltip_text = "Enable to perform his step"
+text = "Change 'mesh layers' to:"
+
+[node name="MeshLayerEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer13"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Regex pattern used to detect nodes to set to ''Skip Import'"
+text = "1"
 
 [node name="Spacer4" type="Control" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
 auto_translate_mode = 1
@@ -80,7 +113,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 tooltip_text = "Enable to perform materials options"
-button_pressed = true
 text = "Export Materials"
 
 [node name="MaterialsPathEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
@@ -88,157 +120,160 @@ unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
-text = "res://art/Environment/Materials"
 placeholder_text = "... path to materials folder ..."
 
 [node name="MaterialsPathButton" type="Button" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
-icon = SubResource("ImageTexture_blstb")
+icon = SubResource("ImageTexture_hjs2i")
 icon_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="MaterialOptions" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label3" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer3"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Textures: "
 
-[node name="TexturesPathEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="TexturesPathEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer3"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
-text = "res://art/Environment/Textures"
 placeholder_text = "... path to textures folder ..."
 
-[node name="TexturesPathButton" type="Button" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="TexturesPathButton" type="Button" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer3"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
-icon = SubResource("ImageTexture_blstb")
+icon = SubResource("ImageTexture_hjs2i")
 icon_alignment = 1
 
-[node name="Label5" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="Label5" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "(textures optional) If set, an attempt will be made to set up the extracted materials with textures using the name of the material and specified tags. All tags must be valid regex if used. Empty tags are ignored."
 autowrap_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Albedo map tag"
 
-[node name="AlbedoMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="AlbedoMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "(_a|_d|_c|_bc)$"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer4"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Nomal map tag"
 
-[node name="NormalMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="NormalMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer4"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "_n$"
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer5"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Metallic map tag"
 
-[node name="MetallicMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="MetallicMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer5"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "_ms$"
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer6"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer6"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Roughness map tag"
 
-[node name="RoughnessMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer6"]
+[node name="RoughnessMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer6"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "_mro$"
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer7"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer7"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Ambient occlusion map tag"
 
-[node name="AOcclusionMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer7"]
+[node name="AOcclusionMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer7"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "(_o|_ao)$"
 
-[node name="HBoxContainer10" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer10" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer10"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer10"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Emission map tag"
 
-[node name="EmissionMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer10"]
+[node name="EmissionMapEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer10"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "_e$"
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer8"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer8"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Material name cleanup"
 
-[node name="MatNameCleanupEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer8"]
+[node name="MatNameCleanupEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer8"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
@@ -247,17 +282,17 @@ tooltip_text = "Regex used to clean up the material name to improve texture name
 Example, to remove a post/prefix from the name. Use lowercase."
 text = "^(m_|t_)"
 
-[node name="HBoxContainer9" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer9" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer9"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer9"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Texture name cleanup"
 
-[node name="TexNameCleanupEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer9"]
+[node name="TexNameCleanupEdit" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer9"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
@@ -266,79 +301,79 @@ tooltip_text = "Regex used to clean up the texture name to improve texture name 
 Example, to remove a post/prefix from the name. Use lowercase."
 text = "^(t_)|(_a|_d|_c|_bc|_n|_m|_ro|_ao|_e|_mro|_ms|_o)$"
 
-[node name="Spacer2" type="Control" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="Spacer2" type="Control" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="OverrideMatsCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="OverrideMatsCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Override existing materials."
 autowrap_mode = 2
 
-[node name="ForceUpdateScenesCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ForceUpdateScenesCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 button_pressed = true
 text = "Force update scenes with materials even if already extracted."
 
-[node name="SaveCleanMaterialNameCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="SaveCleanMaterialNameCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 text = "Save material with cleaned-up name."
 
-[node name="Spacer3" type="Control" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="ResetCullModeCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ResetCullModeCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 button_pressed = true
 text = "Reset Cull Mode to 'Back'"
 
-[node name="ResetVertexAsAlbedoColorCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ResetVertexAsAlbedoColorCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 button_pressed = true
 text = "Reset Vertex as Albedo Color to 'False'"
 
-[node name="ResetAlbedoColorCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ResetAlbedoColorCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 text = "Reset Albedo Color to 'White'"
 
-[node name="ResetMetallicValueCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ResetMetallicValueCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 button_pressed = true
 text = "Reset Metallic Value to '0' when no texture present"
 
-[node name="HBoxContainer12" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer12" type="HBoxContainer" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 layout_mode = 2
 
-[node name="ResetRoughnessValueCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer12"]
+[node name="ResetRoughnessValueCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer12"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
 button_pressed = true
 text = "Reset Roughness Value  when no texture present to:"
 
-[node name="ResetRoughnessValueEd" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer12"]
+[node name="ResetRoughnessValueEd" type="LineEdit" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions/HBoxContainer12"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "0.5"
 
-[node name="ResetEmissionCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="ResetEmissionCheck" type="CheckBox" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer/MaterialOptions"]
 unique_name_in_owner = true
 auto_translate_mode = 1
 layout_mode = 2
